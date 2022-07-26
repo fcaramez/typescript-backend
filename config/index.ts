@@ -1,3 +1,4 @@
+
 import express from "express";
 import logger from "morgan";
 import cookieParser from "cookie-parser";
@@ -40,3 +41,4 @@ module.exports = (app: any) => {
     next();
   });
 };
+

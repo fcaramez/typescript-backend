@@ -1,3 +1,4 @@
+
 module.exports = (app: any) => {
   app.use((req: any, res: any, next: any) => {
     res.status(400).json({ errorMessage: "This route does not exist" });
@@ -12,3 +13,4 @@ module.exports = (app: any) => {
     }
   });
 };
+

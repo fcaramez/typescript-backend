@@ -1,3 +1,4 @@
+
 import mongoose from "mongoose";
 import MONGO_URI from "../utils/consts";
 
@@ -11,3 +12,4 @@ mongoose
   .catch((err: string) => {
     console.error("Error connecting to mongo: ", err);
   });
+

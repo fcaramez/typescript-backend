@@ -1,5 +1,5 @@
+
 import { expressjwt as jwt } from "express-jwt";
-import { Request } from "express";
 
 const isAuthenticated = jwt({
   secret: process.env.TOKEN_SECRET,
@@ -8,10 +8,10 @@ const isAuthenticated = jwt({
   getToken: getTokenFromHeaders,
 });
 
-function getTokenFromHeaders(req: Request) {
+function getTokenFromHeaders(req: any) {
   if (
     req.headers.authorization &&
-    req.headers.authorization.split(" ")[0] === "Bearer "
+    req.headers.authorization.split(" ")[0] === "Bearer"
   ) {
     const token: string = req.headers.authorization.split(" ")[1];
     return token;
@@ -20,4 +20,5 @@ function getTokenFromHeaders(req: Request) {
   return null;
 }
 
-export default { isAuthenticated };
+module.exports = { isAuthenticated };
+
