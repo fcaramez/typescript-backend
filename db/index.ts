@@ -1,10 +1,9 @@
-
-import mongoose from "mongoose";
+import mongoose, { Mongoose } from "mongoose";
 import MONGO_URI from "../utils/consts";
 
 mongoose
   .connect(MONGO_URI)
-  .then((x: any) => {
+  .then((x: Mongoose) => {
     console.log(
       `Connected to Mongo! Database name: "${x.connections[0].name}"`
     );

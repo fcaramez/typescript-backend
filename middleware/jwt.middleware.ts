@@ -1,5 +1,5 @@
-
 import { expressjwt as jwt } from "express-jwt";
+import { Request } from "express-jwt";
 
 const isAuthenticated = jwt({
   secret: process.env.TOKEN_SECRET,
@@ -8,7 +8,7 @@ const isAuthenticated = jwt({
   getToken: getTokenFromHeaders,
 });
 
-function getTokenFromHeaders(req: any) {
+function getTokenFromHeaders(req: Request) {
   if (
     req.headers.authorization &&
     req.headers.authorization.split(" ")[0] === "Bearer"

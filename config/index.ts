@@ -1,5 +1,4 @@
-
-import express from "express";
+import express, { Application, NextFunction, Response, Request } from "express";
 import logger from "morgan";
 import cookieParser from "cookie-parser";
 import cors from "cors";
@@ -7,7 +6,7 @@ import session from "express-session";
 import MongoStore from "connect-mongo";
 import MONGO_URI from "../utils/consts";
 
-module.exports = (app: any) => {
+module.exports = (app: Application) => {
   app.set("trust proxy", 1);
   app.use(
     cors({
@@ -36,9 +35,8 @@ module.exports = (app: any) => {
     })
   );
 
-  app.use((req: any, res: any, next: any) => {
+  app.use((req: Request, res: Response, next: NextFunction) => {
     req.user = req.session.user || null;
     next();
   });
 };
-

@@ -1,5 +1,5 @@
 {
-  "name": "server-server",
+  "name": "fcaramez-typescript-servers-template",
   "version": "0.0.0",
   "private": "true",
   "main": "./server.ts",
@@ -41,4 +41,3 @@
     "ts-node": "^10.9.1"
   }
 }
-
