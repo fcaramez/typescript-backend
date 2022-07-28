@@ -13,7 +13,7 @@
 
 - On package.json and package-lock.json change the "name" to your project's name;
 - Make sure you run `npm install`;
-- Add a .env to your main folder with all the environment variables that you will need;
+- Add a <b>.env</b> to your main folder with all the environment variables that you will need;
 - After that, run `npm run build` to do an initial compiling of all the initial files;
 - To initialize your project and keep the surver running just type `npm start` on your terminal and it will start listening to changes;
 - Use the <b> custom.d.ts </b> file to create global interfaces;
