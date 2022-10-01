@@ -12,7 +12,7 @@ const storage = new CloudinaryStorage({
   cloudinary,
   params: {
     allowed_formats: ["jpg", "png", "jpeg"],
-    folder: "ticket-master",
+    folder: __dirname.split("/").reverse()[1].toString(),
   },
 });
 

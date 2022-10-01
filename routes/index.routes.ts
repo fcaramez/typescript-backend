@@ -2,7 +2,7 @@ const router = require("express").Router();
 import { Request, Response, NextFunction } from "express";
 const fileUploader = require("../config/cloudinary.config");
 
-router.get("/", (req: Request, res: Response, next: NextFunction) => {
+router.get("/", (_req: Request, res: Response, _next: NextFunction) => {
   res.json("All is good in here");
 });
 
